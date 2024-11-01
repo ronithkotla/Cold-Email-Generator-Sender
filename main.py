@@ -128,7 +128,7 @@ if rad == "Sender":
 
 if rad == "Database":
     st.title("Students data")
-    data=pd.read_csv("C:/Users/ronit/OneDrive/Desktop/minor_project/minipro/app/resource/Student_profiles.csv")
+    data=pd.read_csv("Student_profiles.csv")
     st.table(data)
 
 
