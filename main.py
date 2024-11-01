@@ -52,7 +52,7 @@ if rad == "Home":
     st.write("2. This will create a Cold Email , Click on copy option on top right corner.")
     st.write("3. Open Sender page and paste the copied email and fill the remaining details.")
     st.write("4. Watch this video to find the app password")
-    st.video("C:/Users/ronit/OneDrive/Desktop/minor_project/minipro/app/Password finder.mp4")
+    st.video("C:/Users/ronit/OneDrive/Desktop/try/app/Password finder.mp4")
     st.write("5. The Email will be sent successfully.")
     st.write("6. To see the student details open Database webpage.")
     st.subheader("Key Benefits:")
