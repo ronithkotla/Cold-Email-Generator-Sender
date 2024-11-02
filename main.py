@@ -12,7 +12,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import requests
 from bs4 import BeautifulSoup
-import pywhatkit
+
 
 
 def create_streamlit_app(llm, profiles, clean_text):
@@ -41,7 +41,7 @@ def create_streamlit_app(llm, profiles, clean_text):
             st.error(f"An Error Occurred: {e}")
 
 
-rad = st.sidebar.radio("Navigation",["Home","Generator","Mail_Sender","Whatsapp_Sender","Database"])
+rad = st.sidebar.radio("Navigation",["Home","Generator","Mail_Sender","Database"])
 if rad == "Home":
     st.title("🤖 Cold Email Generator & Sender")
     st.subheader("About:")
@@ -53,8 +53,8 @@ if rad == "Home":
     st.write("4. Watch this video to find the app password")
     st.video("Password finder.mp4")
     st.write("5. The Email will be sent successfully.")
-    st.write("6. If you want to send the message via Whatsapp use whatsapp_sender.")
-    st.write("7. To see the student details open Database webpage.")
+    
+    st.write("6. To see the student details open Database webpage.")
     st.subheader("Key Benefits:")
     st.write("1. Saves a lot of time, Generate and send Cold Email in Seconds.")
     st.write("2. Tailored to Each Recipient , generates on specific job roles.")
@@ -130,17 +130,4 @@ if rad == "Database":
     st.title("Students data")
     data=pd.read_csv("Student_profiles.csv")
     st.table(data)
-    
-if rad == "Whatsapp_Sender":
-    st.title("📲 Send WhatsApp Message ")
-    phone_number = st.text_input("Enter WhatsApp Number (with country code, e.g., +910123456789)")
-    message = st.text_area("Enter Message")
-
-    if st.button("Send Message"):
-        try:
-            # Send message instantly
-            kit.sendwhatmsg_instantly(phone_number, message, wait_time=15)
-            st.success("Message sent successfully!")
-        except Exception as e:
-            st.error(f"Failed to send message: {e}")
 
