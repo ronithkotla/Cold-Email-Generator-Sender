@@ -113,7 +113,7 @@ psutil==6.1.0
 pyarrow==18.0.0
 pyasn1==0.6.1
 pyasn1_modules==0.4.1
-PyAutoGUI==0.9.54
+
 pycparser==2.22
 pydantic==2.9.2
 pydantic-settings==2.6.0
