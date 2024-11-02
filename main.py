@@ -1,5 +1,7 @@
 import streamlit as st
-
+_import_('pysqlite3') 
+import sys 
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 from chains import Chain
 from portfolio import Portfolio
 from utils import clean_text
