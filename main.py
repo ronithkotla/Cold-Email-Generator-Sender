@@ -46,6 +46,7 @@ def home():
     st.title("🤖 Cold Email Generator & Sender")
     st.subheader("About:")
     st.write("Generate high-quality, personalized cold emails with AI in seconds! Our AI-Powered Cold Email Generator & Sender is designed to help you reach out with impact. Whether you are connecting with potential employers, clients, or networking opportunities, this tool crafts emails tailored to your recipients needs and your unique goals. Simply input a website link that contains a job posting you want to apply and let the AI create a compelling, polished message that stands out in any inbox.It also includes all eligible Students List into the Email. With automated sending options, and privacy-focused design, your outreach is just a click away. Connect smarter and more efficiently with AI-driven emails that make the right impression every time.This website is particulary designed for Placement Incharge for Bharat Institute of Engineering and Technology.")
+    st.image("img.jpg")
     st.subheader("How to use:")
     st.write("1. Enter a website a link that contains job posting into the Generator and click Submit.")
     st.write("2. This will create a Cold Email , Click on copy option on top right corner.")
