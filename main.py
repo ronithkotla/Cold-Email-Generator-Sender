@@ -41,8 +41,8 @@ def create_streamlit_app(llm, profiles, clean_text):
             st.error(f"An Error Occurred: {e}")
 
 
-rad = st.sidebar.radio("Navigation",["Home","Generator","Mail_Sender","Database"])
-if rad == "Home":
+
+def home():
     st.title("🤖 Cold Email Generator & Sender")
     st.subheader("About:")
     st.write("Generate high-quality, personalized cold emails with AI in seconds! Our AI-Powered Cold Email Generator & Sender is designed to help you reach out with impact. Whether you are connecting with potential employers, clients, or networking opportunities, this tool crafts emails tailored to your recipients needs and your unique goals. Simply input a website link that contains a job posting you want to apply and let the AI create a compelling, polished message that stands out in any inbox.It also includes all eligible Students List into the Email. With automated sending options, and privacy-focused design, your outreach is just a click away. Connect smarter and more efficiently with AI-driven emails that make the right impression every time.This website is particulary designed for Placement Incharge for Bharat Institute of Engineering and Technology.")
@@ -62,7 +62,7 @@ if rad == "Home":
     st.write("4. Consistency, Reliability and Security")
     st.subheader("Note:")
     st.write(" This Cold Email Generator is designed to be used specifically by Placements Incharge of Bharat Institute of Engineering and Technology, the database is original students profiles, Donot misuse this project. ")
-if rad == "Generator": 
+def generator(): 
     # st.set_page_config(layout="wide", page_title="Cold Email Generator", page_icon="📧")
     
     chain = Chain()
@@ -71,7 +71,7 @@ if rad == "Generator":
     create_streamlit_app(chain, profiles, clean_text)
     # st.title("Cold Email Generator")
 
-if rad == "Mail_Sender":
+def email_sender():
     if "from_email" not in st.session_state:
         st.session_state.from_email = ""
         st.session_state.password = ""
@@ -126,8 +126,22 @@ if rad == "Mail_Sender":
             st.warning("Please fill in all fields.")
 
 
-if rad == "Database":
+def data():
     st.title("Students data")
     data=pd.read_csv("Student_profiles.csv")
     st.table(data)
+pages=st.navigation(
+    [
+        st.Page(home,title="Home",icon="🏠"),
+        st.Page(generator,title="Email Generator",icon="📧"),
+        st.Page(email_sender,title="Email Sender",icon="📨"),
+        st.Page(data,title="Students Data",icon="📊"),
+        
+    ]
+)
+
+
+pages.run()
+
+st.sidebar.page_link("https://placements-students-data-assistant.streamlit.app/",label="Assistant",icon="🤖")
 
