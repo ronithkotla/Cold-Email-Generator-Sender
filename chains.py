@@ -44,7 +44,7 @@ class Chain:
             Over our experience, we have empowered numerous Students with talents,skills, 
             and we provide better placements to eligible students.
             Your job is to write a cold email to the client regarding the job mentioned above describing the capability of Bharat Institute of Engineering and Technology students who are eligible, 
-            in fulfilling their needs.
+            in fulfilling their needs.Mention student names,their skills{skills} and their linkedin links donot make up things about students.
             Also add the most relevant ones from the following Linkedin links of students from my chromadb database along with their names and skills {skills}to showcase Students details : {link_list} 
             Remember you are S.M.Raw,Placements Incharge at Bharat Institute of Engineering and Technology . 
             Do not provide a preamble.Donot give more line spaces.
