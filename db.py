@@ -12,7 +12,7 @@ GROQ_API_KEY = "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"
 # Define the chatbot class
 class GroqChatbot:
     def __init__(self):
-        self.llm = ChatGroq(temperature=0, groq_api_key=GROQ_API_KEY, model_name="llama-3.1-70b-versatile")
+        self.llm = ChatGroq(temperature=0, groq_api_key=GROQ_API_KEY, model_name="llama-3.3-70b-versatile")
 
     def get_response(self, user_input):
         # Append the user's input to the conversation history
